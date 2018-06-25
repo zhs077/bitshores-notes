@@ -31,6 +31,7 @@
 
 验证：如果全量节点（机器A）挂掉了，机器B貌似就不工作了，反之可以；
 后续思考：多个全量节点如果配合工作，防止单点故障？
+解决办法：节点应该尽量多，防止一个节点故障放大影响
 11个理事会帐户，26个节点理解
 11个理事会账户，对应my-genesis.json 中的initial_committee_candidates 字段
   "initial_committee_candidates": [{
