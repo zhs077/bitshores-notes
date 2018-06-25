@@ -1,4 +1,33 @@
 2018-06-25 
+实验：机器A为全量节点，每隔5秒生成一个区块，机器B新的一个节点，每隔5秒生成一个区块
+效果：机器A和机器B互相生成区块，且互相同步。
+机器A:
+2200005ms th_a       application.cpp:499           handle_block         ] Got block: #100604 time: 2018-06-25T07:36:40 latency: 5 ms from: zhstest  irreversible: 100596 (-8)
+2205005ms th_a       witness.cpp:184               block_production_loo ] Generated block #100605 with timestamp 2018-06-25T07:36:45 at time 2018-06-25T07:36:45
+2210001ms th_a       witness.cpp:184               block_production_loo ] Generated block #100606 with timestamp 2018-06-25T07:36:50 at time 2018-06-25T07:36:50
+2215002ms th_a       witness.cpp:184               block_production_loo ] Generated block #100607 with timestamp 2018-06-25T07:36:55 at time 2018-06-25T07:36:55
+2220002ms th_a       witness.cpp:184               block_production_loo ] Generated block #100608 with timestamp 2018-06-25T07:37:00 at time 2018-06-25T07:37:00
+2225005ms th_a       application.cpp:499           handle_block         ] Got block: #100609 time: 2018-06-25T07:37:05 latency: 5 ms from: zhstest  irreversible: 100599 (-10)
+2230004ms th_a       witness.cpp:184               block_production_loo ] Generated block #100610 with timestamp 2018-06-25T07:37:10 at time 2018-06-25T07:37:10
+2235004ms th_a       witness.cpp:184               block_production_loo ] Generated block #100611 with timestamp 2018-06-25T07:37:15 at time 2018-06-25T07:37:15
+2240001ms th_a       witness.cpp:184               block_production_loo ] Generated block #100612 with timestamp 2018-06-25T07:37:20 at time 2018-06-25T07:37:20
+2245002ms th_a       witness.cpp:184               block_production_loo ] Generated block #100613 with timestamp 2018-06-25T07:37:25 at time 2018-06-25T07:37:25
+2250001ms th_a       witness.cpp:184               block_production_loo ] Generated block #100614 with timestamp 2018-06-25T07:37:30 at time 2018-06-25T07:37:30
+2255001ms th_a       witness.cpp:184               block_production_loo ] Generated block #100615 with timestamp 2018-06-25T07:37:35 at time 2018-06-25T07:37:35
+2260002ms th_a       witness.cpp:184               block_production_loo ] Generated block #100616 with timestamp 2018-06-25T07:37:40 at time 2018-06-25T07:37:40
+2265002ms th_a       witness.cpp:184               block_production_loo ] Generated block #100617 with timestamp 2018-06-25T07:37:45 at time 2018-06-25T07:37:45
+
+机器B
+2225001ms th_a       witness.cpp:184               block_production_loo ] Generated block #100609 with timestamp 2018-06-25T07:37:05 at time 2018-06-25T07:37:05
+2230007ms th_a       application.cpp:499           handle_block         ] Got block: #100610 time: 2018-06-25T07:37:10 latency: 7 ms from: init0  irreversible: 100599 (-11)
+2235007ms th_a       application.cpp:499           handle_block         ] Got block: #100611 time: 2018-06-25T07:37:15 latency: 7 ms from: init6  irreversible: 100599 (-12)
+2240005ms th_a       application.cpp:499           handle_block         ] Got block: #100612 time: 2018-06-25T07:37:20 latency: 5 ms from: init3  irreversible: 100599 (-13)
+2245005ms th_a       application.cpp:499           handle_block         ] Got block: #100613 time: 2018-06-25T07:37:25 latency: 4 ms from: init2  irreversible: 100601 (-12)
+2250005ms th_a       application.cpp:499           handle_block         ] Got block: #100614 time: 2018-06-25T07:37:30 latency: 5 ms from: init4  irreversible: 100605 (-9)
+2255005ms th_a       application.cpp:499           handle_block         ] Got block: #100615 time: 2018-06-25T07:37:35 latency: 5 ms from: init5  irreversible: 100607 (-8)
+2260005ms th_a       application.cpp:499           handle_block         ] Got block: #100616 time: 2018-06-25T07:37:40 latency: 5 ms from: init9  irreversible: 100608 (-8)
+2265005ms th_a       application.cpp:499           handle_block         ] Got block: #100617 time: 2018-06-25T07:37:45 latency: 5 ms from: init1  irreversible: 100609 (-8)
+2270001ms th_a       witness.cpp:184               block_production_loo ] Generated block #100618 with timestamp 2018-06-25T07:37:50 at time 2018-06-25T07:37:50
 11个理事会帐户，26个节点
 11个理事会账户，对应my-genesis.json 中的initial_committee_candidates 字段
   "initial_committee_candidates": [{
@@ -37,4 +66,7 @@ witness-id = "1.6.8"
 witness-id = "1.6.9"
 witness-id = "1.6.10"
 witness-id = "1.6.11"
-这些节点是固定的，如果想新增节点，
+这些节点是固定的，如果想新增节点，节点号会自动往后添加
+
+
+
