@@ -28,7 +28,10 @@
 2260005ms th_a       application.cpp:499           handle_block         ] Got block: #100616 time: 2018-06-25T07:37:40 latency: 5 ms from: init9  irreversible: 100608 (-8)
 2265005ms th_a       application.cpp:499           handle_block         ] Got block: #100617 time: 2018-06-25T07:37:45 latency: 5 ms from: init1  irreversible: 100609 (-8)
 2270001ms th_a       witness.cpp:184               block_production_loo ] Generated block #100618 with timestamp 2018-06-25T07:37:50 at time 2018-06-25T07:37:50
-11个理事会帐户，26个节点
+
+验证：如果全量节点（机器A）挂掉了，机器B貌似就不工作了，反之可以；
+后续思考：多个全量节点如果配合工作，防止单点故障？
+11个理事会帐户，26个节点理解
 11个理事会账户，对应my-genesis.json 中的initial_committee_candidates 字段
   "initial_committee_candidates": [{
       "owner_name": "init0"
@@ -67,6 +70,8 @@ witness-id = "1.6.9"
 witness-id = "1.6.10"
 witness-id = "1.6.11"
 这些节点是固定的，如果想新增节点，节点号会自动往后添加
+
+
 
 
 
