@@ -1,5 +1,5 @@
 2018-06-25 
-实验：机器A为全量节点，每隔5秒生成一个区块，机器B新的一个节点，每隔5秒生成一个区块
+实验：机器A为全量节点，每隔5秒生成一个区块，机器B新的一个节点，每隔5秒生成一个区块(参考https://blog.csdn.net/ggq89/article/details/80234262)
 效果：机器A和机器B互相生成区块，且互相同步。
 机器A:
 2200005ms th_a       application.cpp:499           handle_block         ] Got block: #100604 time: 2018-06-25T07:36:40 latency: 5 ms from: zhstest  irreversible: 100596 (-8)
