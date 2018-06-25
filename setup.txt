@@ -1,0 +1,40 @@
+2018-06-25 
+11个理事会帐户，26个节点
+11个理事会账户，对应my-genesis.json 中的initial_committee_candidates 字段
+  "initial_committee_candidates": [{
+      "owner_name": "init0"
+    },{
+      "owner_name": "init1"
+    },{
+      "owner_name": "init2"
+    },{
+      "owner_name": "init3"
+    },{
+      "owner_name": "init4"
+    },{
+      "owner_name": "init5"
+    },{
+      "owner_name": "init6"
+    },{
+      "owner_name": "init7"
+    },{
+      "owner_name": "init8"
+    },{
+      "owner_name": "init9"
+    },{
+      "owner_name": "init10"
+    }
+  ],
+26个节点：对应的config.ini配置中的
+witness-id = "1.6.1"
+witness-id = "1.6.2"
+witness-id = "1.6.3"
+witness-id = "1.6.4"
+witness-id = "1.6.5"
+witness-id = "1.6.6"
+witness-id = "1.6.7"
+witness-id = "1.6.8"
+witness-id = "1.6.9"
+witness-id = "1.6.10"
+witness-id = "1.6.11"
+这些节点是固定的，如果想新增节点，
